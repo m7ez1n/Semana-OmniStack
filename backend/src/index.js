@@ -1,18 +1,18 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const path = require("path");
-const cors = require("cors");
+const express = require('express');
+const mongoose = require('mongoose');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
 
-const server = require("http").Server(app);
-const io = require("socket.io")(server);
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 
 mongoose.connect(
-  "mongodb+srv://Mateus:root@cluster0-rxvbr.mongodb.net/test?retryWrites=true&w=majority",
+  'mongodb+srv://Mateus:root@cluster0-rxvbr.mongodb.net/test?retryWrites=true&w=majority',
   {
-    useNewUrlParser: true
-  }
+    useNewUrlParser: true,
+  },
 );
 
 app.use((req, res, next) => {
@@ -23,11 +23,8 @@ app.use((req, res, next) => {
 
 app.use(cors());
 
-app.use(
-  "/files",
-  express.static(path.resolve(__dirname, "..", "uploads", "resized"))
-);
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads', 'resized')));
 
-app.use(require("./routes"));
+app.use(require('./routes'));
 
 server.listen(3333);
