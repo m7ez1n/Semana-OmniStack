@@ -4,7 +4,7 @@
 
 ##### Abaixo vou deixar um print de como ficou a aplicação: :sunglasses:
 
-![](/home/mateus/Imagens/PrintApp.png)
+![PrintApp](https://user-images.githubusercontent.com/44484286/59566024-9f7b5200-9030-11e9-8aa9-8b344693b1cd.png)
 
 # Qualquer contribuição é bem vinda, e eu agradeço :heart_eyes: :heartbeat:
 
