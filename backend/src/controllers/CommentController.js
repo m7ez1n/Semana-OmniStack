@@ -4,9 +4,7 @@ module.exports = {
   async store(req, res) {
     const post = await Post.findById(req.params.id);
 
-    const comment = req.body;
-
-    post.comment = comment;
+    post.comment = req.body;
 
     await post.save();
 
