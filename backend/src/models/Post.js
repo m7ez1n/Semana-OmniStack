@@ -5,6 +5,9 @@ const PostSchema = new mongoose.Schema(
     author: String,
     place: String,
     description: String,
+    comment: {
+      type: Array,
+    },
     hashtags: String,
     image: String,
     likes: {
